@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS: Sign up form demo</title>
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+
+        table, td, th {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+        td, th {
+            padding: 10px;
+        }
+
+        th {
+            width: 170px;
+            background-color: rgb(200, 200, 200);
+        }
+        
+        td:nth-child(2) {
+            width: 310px;
+        }
+        
+        .buttons-bar {
+            text-align: right;
+            background-color: #fff;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form action="/action_page.php" method="post">
+        <table>
+            <tr>
+                <th><label for="first-name">First Name:</label></th>
+                <td><input type="text" name="first-name" id="first-name" required></td>
+            </tr>
+            <tr>
+                <th><label for="last-name">Last Name:</label></th>
+                <td><input type="text" name="last-name" id="last-name" required></td>
+            </tr>
+            <tr>
+                <th><label for="birthday">Birthday:</label></th>
+                <td><input type="date" name="birthday" id="birthday"></td>
+            </tr>
+            <tr>
+                <th><label for="profile-color">Profile Color:</label></th>
+                <td><input type="color" name="profile-color" id="profile-color"></td>
+            </tr>
+            <tr>
+                <th><label for="states">States</label></th>
+                <td>
+                    <select name="states" id="states">
+                        <option value="khz">Khuzestan</option>
+                        <option value="thr">Tehran</option>
+                        <option value="shz">Shiraz</option>
+                        <option value="tbz">Tabriz</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="marrage-status">Marrage Status:</label></th>
+                <td>
+                    <input type="radio" name="m-status" id="married" checked>
+                    <label for="married">Married</label>
+                    <input type="radio" name="m-status" id="single">
+                    <label for="single">Single</label>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="social-nets">Social Networks:</label></th>
+                <td>
+                    <input type="checkbox" name="whatsapp" id="whatsapp">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="checkbox" name="facebook" id="facebook">
+                    <label for="favebook">Facebook</label>
+                    <input type="checkbox" name="Telegram" id="telegram">
+                    <label for="telegram">Telegram</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="buttons-bar">
+                    <input type="submit" value="Submit Form">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>    
+</body>
+</html>
