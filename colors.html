@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 24px;
+            box-sizing: border-box;
+        }
+        .box {
+            height: 70px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .red-box {
+            background-color: #f00;
+        }
+
+        .yellow-box {
+            background-color: yellow
+        }
+
+        .red-box {
+            background-color: orange;
+        }
+
+        nav {
+            width: 100%;
+            height: 70px;
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            background-color: beige;
+            box-shadow: 1px 1px 3px rgb(50%, 50%, 50%);
+            padding: 10px;
+        }
+
+        nav input[type="text"] {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <label for="red-color">Red:</label>
+        <input type="text" name="" id="red-color" value="0">
+        <label for="green-color">Green:</label>
+        <input type="text" name="" id="green-color" value="0">
+        <label for="blue-color">Blue:</label>
+        <input type="text" name="" id="blue-color" value="0">
+        <button id="add-box">Add Box</button>
+    </nav>
+    <div id="container">
+
+    </div>
+    <script>
+              
+        let container = document.getElementById("container");
+        let addBox = document.getElementById("add-box");
+        
+        addBox.addEventListener("click", () => {
+            let redValue = document.getElementById("red-color").value;
+            let greenValue = document.getElementById("green-color").value;
+            let blueValue = document.getElementById("blue-color").value;
+            let colorString = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+            let newDiv = document.createElement("div");
+
+            newDiv.classList.add("box");
+            newDiv.style.backgroundColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+            newDiv.innerHTML = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+
+            container.appendChild(newDiv);
+        });
+        
+    </script>
+</body>
+</html>
